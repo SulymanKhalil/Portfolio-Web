@@ -126,3 +126,22 @@ a, button, [role="button"], [data-cursor-hover], .cursor-pointer {
     scroll-behavior: auto !important;
   }
 }
+
+/* Viewport lock visibility controls to prevent loading screen blink on mobile/tablet */
+@media (max-width: 899px) {
+  .mobile-only-flex {
+    display: flex !important;
+  }
+  .desktop-only-block {
+    display: none !important;
+  }
+}
+@media (min-width: 900px) {
+  .mobile-only-flex {
+    display: none !important;
+  }
+  .desktop-only-block {
+    display: block !important;
+  }
+}
+
