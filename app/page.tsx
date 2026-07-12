@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
+import { faLaptopCode, faTriangleExclamation } from "@fortawesome/free-solid-svg-icons";
 import BootSequence from "@/components/loader/BootSequence";
 import AmbientBackground from "@/components/ui/AmbientBackground";
 import SceneNav from "@/components/nav/SceneNav";
@@ -71,12 +71,12 @@ export default function Home() {
         <div className="glass-strong rounded-3xl p-8 md:p-10 max-w-md w-full text-center border border-white/10 flex flex-col items-center gap-6 relative z-10 shadow-2xl">
           <div className="w-20 h-20 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-aqua shadow-inner relative">
             <div className="absolute inset-0 rounded-full bg-aqua/10 blur-md opacity-50" />
-            <FontAwesomeIcon icon={faLaptopCode} className="text-3xl relative z-10" />
+            <FontAwesomeIcon icon={faTriangleExclamation} className="text-3xl relative z-10 text-red-500" />
           </div>
 
           <div className="space-y-4">
             <h1 className="font-display font-700 text-2xl text-frost leading-tight tracking-tight">
-              Desktop Experience Required
+              Desktop Experience Required!
             </h1>
             <p className="text-sm text-soft-gray leading-relaxed font-600 text-aqua/90">
               Please view this page on a desktop or a device with a wider viewport to experience the full features.
