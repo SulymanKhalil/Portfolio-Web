@@ -116,7 +116,8 @@ export default function ContactScene() {
             <span className="w-5 flex justify-center text-aqua shrink-0">
               <FontAwesomeIcon icon={faPhone} size="sm" />
             </span>
-            <a href={`tel:${profile.contact.replace(/\s+/g, "")}`} className="hover:text-aqua transition-colors">
+            <a href={`https://wa.me/${profile.contact.replace(/\D/g, "")}`} target="_blank"
+              rel="noopener noreferrer" className="hover:text-aqua transition-colors">
               {profile.contact}
             </a>
           </p>
@@ -172,9 +173,8 @@ export default function ContactScene() {
                     initial={{ opacity: 0, y: 6 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -6 }}
-                    className={`font-mono text-xs flex items-center gap-2 ${
-                      status === "error" ? "text-red-400" : "text-aqua"
-                    }`}
+                    className={`font-mono text-xs flex items-center gap-2 ${status === "error" ? "text-red-400" : "text-aqua"
+                      }`}
                   >
                     {status === "delivered" && <FontAwesomeIcon icon={faCircleCheck} />}
                     {status === "error" && <FontAwesomeIcon icon={faCircleExclamation} />}

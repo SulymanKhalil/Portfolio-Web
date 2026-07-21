@@ -27,27 +27,27 @@ const skillCategories = [
     skills: ["Node.js", "Express.js", "Nest.js"],
   },
   {
-    title: "Mobile Development",
-    skills: ["React Native"],
+    title: "Databases",
+    skills: ["MongoDB", "PostgreSQL"],
   },
   {
     title: "State Management",
-    skills: ["Redux Toolkit"],
+    skills: ["Redux Toolkit", "Context API"],
   },
   {
     title: "Video Streaming",
     skills: ["WebRTC", "FFmpeg"],
   },
   {
-    title: "AI-Assisted Development",
+    title: "AI Engineering",
     skills: [
       "tmux",
       "Herdr",
+      "Claude",
+      "Cursor",
       "Prompt Engineering",
       "Context Engineering",
       "Loop Engineering",
-      "Claude",
-      "Cursor",
     ],
   },
 ];

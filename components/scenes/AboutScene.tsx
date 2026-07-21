@@ -11,15 +11,15 @@ const fragments = [
   },
   {
     label: "Focus",
-    body: "Full-Stack Development, Mobile Engineering & Real-Time Systems, where complex problems become elegant products"
+    body: "Full-Stack Development & Real-Time Systems, where complex problems become elegant products"
   },
   {
     label: "Workflow",
-    body: "Builds with AI as real engineering leverage, Claude for planning and architecture, Cursor for implementation.",
+    body: "Builds with AI as real engineering leverage, using Claude for planning and architecture, Cursor for implementation, tmux for parallel development workflows, and Herdr to coordinate multiple AI agents."
   },
   {
     label: "Off-console",
-    body: "Cricket, Sketching, Reading. Thinks in first principles more than frameworks.",
+    body: "Cricket, sketching, and reading. Thinks in first principles over frameworks, values depth over trends, and enjoys breaking down complex problems into simple, practical solutions.",
   },
 ];
 
