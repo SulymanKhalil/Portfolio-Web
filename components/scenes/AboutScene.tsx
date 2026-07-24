@@ -43,7 +43,7 @@ export default function AboutScene() {
           {profile.bio}
         </p>
         <div className="flex flex-wrap gap-2 mt-8">
-          {skills.core.map((s) => (
+          {[...skills.core, ...skills.growing, ...skills.tools].map((s) => (
             <span
               key={s}
               className="font-mono text-[10px] tracking-widest uppercase px-3 py-1.5 rounded-full glass text-soft-gray"

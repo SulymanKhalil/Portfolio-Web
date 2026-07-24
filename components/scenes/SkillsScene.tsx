@@ -41,8 +41,6 @@ const skillCategories = [
   {
     title: "AI Engineering",
     skills: [
-      "tmux",
-      "Herdr",
       "Claude",
       "Cursor",
       "Prompt Engineering",

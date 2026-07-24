@@ -223,15 +223,15 @@ export const experience = [
 export const skills = {
   core: [
     "AI-Assisted Workflow",
-    "React.js",
-    "Next.js",
-    "Express.js",
+    "Reactjs",
+    "Nextjs",
+    "Expressjs",
     "NestJS",
     "MongoDB",
     "PostgreSQL",
   ],
   growing: ["WebRTC", "FFmpeg", "System Design", "Architecture Study"],
-  tools: ["Herdr", "tmux", "Claude", "Cursor"],
+  tools: ["Claude", "Cursor"],
 } as const;
 
 export const profile = {
