@@ -4,11 +4,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Portfolio • Sulyman",
   description:
-    "Frontend Engineer building fast, real-time web interfaces with React & Next.js. An interactive digital experience, not a traditional portfolio.",
+    "Software Engineer building fast, real-time web interfaces with React & Next.js. An interactive digital experience, not a traditional portfolio.",
   metadataBase: new URL("https://sulymanlive.netlify.app"),
   openGraph: {
     title: "Portfolio • Sulyman",
-    description: "Frontend Engineer building fast, real-time web interfaces with React & Next.js.",
+    description: "Software Engineer building fast, real-time web interfaces with React & Next.js.",
     type: "website",
   },
 };
