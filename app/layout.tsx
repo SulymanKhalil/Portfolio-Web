@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Sulyman Khalil — Entering Sulyman",
+  title: "Portfolio • Sulyman",
   description:
-    "Sulyman Khalil — Frontend Engineer building real-time and video-streaming interfaces. An interactive digital experience, not a traditional portfolio.",
+    "Frontend Engineer building fast, real-time web interfaces with React & Next.js. An interactive digital experience, not a traditional portfolio.",
   metadataBase: new URL("https://sulymanlive.netlify.app"),
   openGraph: {
-    title: "Entering Sulyman",
-    description: "Frontend Engineer — real-time & video-streaming interfaces.",
+    title: "Portfolio • Sulyman",
+    description: "Frontend Engineer building fast, real-time web interfaces with React & Next.js.",
     type: "website",
   },
 };
