@@ -13,22 +13,12 @@ const skillCategories = [
     skills: [
       "React.js",
       "Next.js",
-      "Vue.js",
-      "Angular",
       "Umi.js",
       "Tailwind CSS",
       "Bootstrap",
       "Material UI",
       "Ant Design",
     ],
-  },
-  {
-    title: "Backend",
-    skills: ["Node.js", "Express.js", "Nest.js"],
-  },
-  {
-    title: "Databases",
-    skills: ["MongoDB", "PostgreSQL"],
   },
   {
     title: "State Management",
