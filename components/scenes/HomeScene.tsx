@@ -39,8 +39,7 @@ export default function HomeScene({
         className="max-w-xl text-base md:text-lg text-soft-gray leading-relaxed"
       >
         {profile.name} — {profile.title} Building digital products where
-        thoughtful engineering meets meaningful experiences. I turn ambitious ideas into production-ready software at MultiConnect
-        Horizon.
+        thoughtful engineering meets meaningful experiences. I turn ambitious ideas into production-ready software.
       </motion.p>
 
       <motion.div

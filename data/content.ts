@@ -223,12 +223,10 @@ export const experience = [
 export const skills = {
   core: [
     "AI-Assisted Workflow",
+    "JavaScript(ES6+)",
+    "TypeScript",
     "Reactjs",
-    "Nextjs",
-    "Expressjs",
-    "NestJS",
-    "MongoDB",
-    "PostgreSQL",
+    "Nextjs"
   ],
   growing: ["WebRTC", "FFmpeg", "System Design", "Architecture Study"],
   tools: ["Claude", "Cursor"],
@@ -237,7 +235,7 @@ export const skills = {
 export const profile = {
   name: "Sulyman Khalil",
   title: "Software Engineer",
-  focus: "Development & Real-time Systems",
+  focus: "Software Engineering & Performance",
   location: "Lahore, Pakistan",
   email: "sulymankhalil.dev@gmail.com",
   github: "https://github.com/SulymanKhalil",
@@ -245,5 +243,5 @@ export const profile = {
   contact: "+92 3707843216",
   portfolio: "https://sulymanlive.netlify.app",
   availability: "Open to onsite/remote roles",
-  bio: "Full Stack Developer with 1+ year of experience crafting modern web experiences. Passionate about clean architecture, intuitive user interfaces, and AI-assisted engineering, I build fast, scalable products that turn ambitious ideas into production-ready solutions.",
+  bio: "Full Stack Developer with 1 year of experience crafting modern web experiences. Passionate about clean architecture, intuitive user interfaces, and AI-assisted engineering, I build fast, scalable products that turn ambitious ideas into production-ready solutions.",
 };

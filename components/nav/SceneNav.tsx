@@ -15,7 +15,7 @@ export default function SceneNav({
       {/* Top-left identity mark */}
       <div className="fixed top-6 left-6 md:top-8 md:left-10 z-50 flex items-center gap-2 font-mono text-[11px] tracking-[0.25em] uppercase text-soft-gray">
         <span className="w-1.5 h-1.5 rounded-full bg-aqua animate-pulse" />
-        <span className="text-frost/70">Sulyman Khalil</span>
+        <span className="text-frost/70">Portfolio • Sulyman</span>
       </div>
 
       {/* Top-right: on-air style scene readout */}

@@ -11,7 +11,7 @@ const fragments = [
   },
   {
     label: "Focus",
-    body: "Full-Stack Development & Real-Time Systems, where complex problems become elegant products"
+    body: "Software Engineering & Product Craft, where complex problems become elegant products"
   },
   {
     label: "Workflow",
