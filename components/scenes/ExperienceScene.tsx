@@ -48,7 +48,7 @@ export default function ExperienceScene() {
               {e.achievements.length > 0 && (
                 <div className="mt-4 pl-3 border-l-2 border-royal-purple/40">
                   {e.achievements.map((a) => (
-                    <p key={a} className="text-sm text-soft-gray italic leading-relaxed">
+                    <p key={a} className="text-sm text-soft-gray leading-relaxed">
                       {a}
                     </p>
                   ))}

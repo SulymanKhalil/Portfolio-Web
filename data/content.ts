@@ -196,26 +196,24 @@ export const experience = [
   {
     id: "multiconnect",
     company: "MultiConnect Horizon Technologies Ltd.",
-    role: "Software Engineer",
-    location: "Hong Kong (Remote)",
+    role: "Software Engineer - I",
+    location: "Hong Kong | Remote",
     period: "Current",
     responsibilities: [
-      "Develop and maintain scalable full-stack web applications using React, Next.js, TypeScript, Node.js, and Express.js.",
-      "Architect and implement secure REST APIs, backend services, and database integrations with a focus on scalability and maintainability.",
-      "Collaborate across engineering teams to optimize performance, resolve technical challenges, and deliver high-quality production features.",
+      "Develop and maintain scalable full-stack web applications using React & Next.js",
+      "Architect and implement secure REST APIs with a focus on scalability and maintainability.",
+      "Collaborate across engineering teams to optimize performance, resolve technical challenges and deliver high-quality production features.",
     ],
     achievements: [
       "Delivered production-ready features that enhanced application performance, usability, and overall development efficiency.",
       "Owned features end-to-end, from frontend implementation and backend development to deployment and ongoing production support.",
     ],
     tech: [
-      "AI-Assisted Development ✦",
+      "AI-Assisted Development",
       "JavaScript",
       "TypeScript",
       "React",
       "Next.js",
-      "Express.js",
-      "NestJS",
     ],
   },
 ] as const;
