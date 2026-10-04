@@ -1,118 +1,81 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-
-const LOG_LINES = [
-  "establishing uplink",
-  "calibrating signal",
-  "loading glass layers",
-  "compositing light",
-  "syncing typography",
-  "transmission ready",
-];
+import { motion } from "framer-motion";
 
 export default function BootSequence({ onDone }: { onDone: () => void }) {
-  const [lineIndex, setLineIndex] = useState(0);
+  const [progress, setProgress] = useState(0);
   const [exiting, setExiting] = useState(false);
 
   useEffect(() => {
-    if (lineIndex >= LOG_LINES.length) {
-      const t = setTimeout(() => setExiting(true), 350);
-      return () => clearTimeout(t);
-    }
-    const t = setTimeout(() => setLineIndex((i) => i + 1), 320);
+    const duration = 1800;
+    const interval = 30;
+    const step = 100 / (duration / interval);
+    const timer = setInterval(() => {
+      setProgress((p) => {
+        const next = p + step + Math.random() * step * 0.5;
+        if (next >= 100) {
+          clearInterval(timer);
+          return 100;
+        }
+        return next;
+      });
+    }, interval);
+    return () => clearInterval(timer);
+  }, []);
+
+  useEffect(() => {
+    if (progress < 100) return;
+    const t = setTimeout(() => setExiting(true), 300);
     return () => clearTimeout(t);
-  }, [lineIndex]);
+  }, [progress]);
 
   useEffect(() => {
     if (!exiting) return;
-    const t = setTimeout(onDone, 900);
+    const t = setTimeout(onDone, 600);
     return () => clearTimeout(t);
   }, [exiting, onDone]);
 
-  const progress = Math.min(100, Math.round((lineIndex / LOG_LINES.length) * 100));
-
   return (
-    <AnimatePresence>
-      {
-        <motion.div
-          className="fixed inset-0 z-[80] flex flex-col items-center justify-center bg-space-black"
-          initial={{ opacity: 1 }}
-          animate={{ opacity: exiting ? 0 : 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
-          style={{ pointerEvents: exiting ? "none" : "auto" }}
+    <motion.div
+      className="fixed inset-0 z-[80] flex flex-col items-center justify-center bg-space-black"
+      animate={{ opacity: exiting ? 0 : 1 }}
+      transition={{ duration: 0.5, ease: [0.76, 0, 0.24, 1] }}
+      style={{ pointerEvents: exiting ? "none" : "auto" }}
+    >
+      <div className="flex flex-col items-center gap-6">
+        <motion.span
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="font-display font-700 text-2xl tracking-tight text-frost"
         >
-          {/* signal scan sweep */}
+          Portfolio{" "}
+          <span className="text-aqua">•</span>{" "}
+          Sulyman
+        </motion.span>
+
+        <div className="w-48 h-[2px] bg-white/10 overflow-hidden rounded-full">
           <motion.div
-            className="absolute inset-0 opacity-40"
+            className="h-full rounded-full"
             style={{
               background:
-                "radial-gradient(ellipse at 50% 50%, rgba(77,232,214,0.09), transparent 60%)",
+                "linear-gradient(90deg, var(--aqua), var(--electric-blue))",
             }}
-            animate={{ opacity: [0.2, 0.45, 0.2] }}
-            transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
+            animate={{ width: `${Math.min(progress, 100)}%` }}
+            transition={{ duration: 0.15, ease: "easeOut" }}
           />
-          <div className="absolute inset-0 scanline opacity-60" />
+        </div>
 
-          <div className="relative flex flex-col items-center gap-8 px-6">
-            {/* frequency bars forming into a mark */}
-            <div className="flex items-end gap-[3px] h-14">
-              {Array.from({ length: 24 }).map((_, i) => (
-                <motion.span
-                  key={i}
-                  className="w-[3px] rounded-full"
-                  style={{
-                    background:
-                      i % 3 === 0 ? "var(--aqua)" : "var(--electric-blue)",
-                  }}
-                  initial={{ height: 4, opacity: 0.3 }}
-                  animate={{
-                    height: [4, 6 + ((i * 37) % 42), 4 + ((i * 19) % 20)],
-                    opacity: [0.3, 1, 0.6],
-                  }}
-                  transition={{
-                    duration: 1.1 + (i % 5) * 0.12,
-                    repeat: Infinity,
-                    repeatType: "mirror",
-                    ease: "easeInOut",
-                    delay: i * 0.03,
-                  }}
-                />
-              ))}
-            </div>
-
-            <div className="flex flex-col items-center gap-3 font-mono text-[11px] tracking-[0.3em] uppercase text-soft-gray">
-              <span className="text-frost/80">Portfolio • Sulyman</span>
-              <AnimatePresence mode="wait">
-                <motion.span
-                  key={lineIndex}
-                  initial={{ opacity: 0, y: 6 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -6 }}
-                  transition={{ duration: 0.25 }}
-                  className="text-aqua/90"
-                >
-                  {LOG_LINES[Math.min(lineIndex, LOG_LINES.length - 1)]}
-                </motion.span>
-              </AnimatePresence>
-            </div>
-
-            <div className="w-56 h-[2px] bg-white/10 overflow-hidden rounded-full">
-              <motion.div
-                className="h-full"
-                style={{
-                  background:
-                    "linear-gradient(90deg, var(--aqua), var(--electric-blue))",
-                }}
-                animate={{ width: `${progress}%` }}
-                transition={{ duration: 0.3, ease: "easeOut" }}
-              />
-            </div>
-          </div>
-        </motion.div>
-      }
-    </AnimatePresence>
+        <motion.span
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.5 }}
+          transition={{ delay: 0.3, duration: 0.5 }}
+          className="font-mono text-[10px] tracking-[0.3em] uppercase text-soft-gray"
+        >
+          Loading
+        </motion.span>
+      </div>
+    </motion.div>
   );
 }

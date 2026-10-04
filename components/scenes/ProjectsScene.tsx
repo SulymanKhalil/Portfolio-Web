@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { projects } from "@/data/content";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -12,7 +12,7 @@ export default function ProjectsScene() {
   const open = projects.find((p) => p.id === openId);
 
   return (
-    <LayoutGroup>
+    <>
       <div className="flex flex-col max-h-[70vh] md:max-h-[75vh] w-full">
         {/* Fixed Header */}
         <div className="shrink-0 pb-6 z-10 bg-space-black/80 backdrop-blur-sm">
@@ -34,12 +34,14 @@ export default function ProjectsScene() {
         </div>
 
         {/* Scrollable Content: 3 columns in a row */}
-        <div className="overflow-y-auto flex-1 pr-2 pb-16 scrollbar-none">
+        <div
+          data-scene-scrollable
+          className="overflow-y-auto flex-1 pr-2 pb-16 scrollbar-none scroll-smooth"
+        >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {projects.map((p, i) => (
               <motion.div
                 key={p.id}
-                layoutId={`card-${p.id}`}
                 onClick={() => setOpenId(p.id)}
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -113,7 +115,10 @@ export default function ProjectsScene() {
               onClick={() => setOpenId(null)}
             />
             <motion.div
-              layoutId={`card-${open.id}`}
+              initial={{ opacity: 0, scale: 0.95, y: 15 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 15 }}
+              transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
               className="relative glass-strong rounded-3xl p-6 md:p-10 max-w-2xl w-full"
             >
               <button
@@ -208,6 +213,6 @@ export default function ProjectsScene() {
           </motion.div>
         )}
       </AnimatePresence>
-    </LayoutGroup>
+    </>
   );
 }

@@ -11,6 +11,11 @@ export const metadata: Metadata = {
     description: "Software Engineer building fast, real-time web interfaces with React & Next.js.",
     type: "website",
   },
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
 };
 
 export default function RootLayout({

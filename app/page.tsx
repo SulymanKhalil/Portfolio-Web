@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLaptopCode, faTriangleExclamation } from "@fortawesome/free-solid-svg-icons";
+import { faTriangleExclamation } from "@fortawesome/free-solid-svg-icons";
 import BootSequence from "@/components/loader/BootSequence";
 import AmbientBackground from "@/components/ui/AmbientBackground";
 import SceneNav from "@/components/nav/SceneNav";

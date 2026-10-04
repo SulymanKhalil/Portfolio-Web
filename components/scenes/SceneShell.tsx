@@ -20,7 +20,7 @@ export default function SceneShell({
       exit="exit"
       className="absolute inset-0 overflow-hidden px-6 md:px-16 flex flex-col justify-center"
     >
-      <div className="w-full max-w-6xl mx-auto my-auto py-16 md:py-24 shrink-0">
+      <div className="w-full max-w-6xl mx-auto my-auto pt-17.5 pb-24 shrink-0">
         {children}
       </div>
     </motion.section>

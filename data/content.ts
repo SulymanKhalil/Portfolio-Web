@@ -200,7 +200,7 @@ export const experience = [
     location: "Hong Kong | Remote",
     period: "Current",
     responsibilities: [
-      "Develop and maintain scalable full-stack web applications using React & Next.js",
+      "Develop and maintain scalable frontend features using React and Umi.js.",
       "Architect and implement secure REST APIs with a focus on scalability and maintainability.",
       "Collaborate across engineering teams to optimize performance, resolve technical challenges and deliver high-quality production features.",
     ],
@@ -213,7 +213,7 @@ export const experience = [
       "JavaScript",
       "TypeScript",
       "React",
-      "Next.js",
+      "Umi.js",
     ],
   },
 ] as const;
@@ -224,9 +224,10 @@ export const skills = {
     "JavaScript(ES6+)",
     "TypeScript",
     "Reactjs",
+    "Umijs",
     "Nextjs"
   ],
-  growing: ["WebRTC", "FFmpeg", "System Design", "Architecture Study"],
+  growing: ["WebRTC", "Ffmpeg", "System Design", "Architecture Study"],
   tools: ["Claude", "Cursor"],
 } as const;
 
