@@ -26,12 +26,3 @@ export const sceneVariants: Variants = {
     transition: { duration: 0.55, ease: [0.7, 0, 0.84, 0] },
   }),
 };
-
-export const staggerParent: Variants = {
-  center: { transition: { staggerChildren: 0.08, delayChildren: 0.15 } },
-};
-
-export const fadeUp: Variants = {
-  enter: { opacity: 0, y: 24 },
-  center: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } },
-};

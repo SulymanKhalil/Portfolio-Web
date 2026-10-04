@@ -1,5 +1,5 @@
 {
-  "name": "entering-sulyman",
+  "name": "portfolio-sulyman",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -16,12 +16,10 @@
     "@fortawesome/free-brands-svg-icons": "^7.3.0",
     "@fortawesome/free-solid-svg-icons": "^7.3.0",
     "@fortawesome/react-fontawesome": "^3.4.0",
-    "@react-email/components": "^1.0.12",
     "framer-motion": "^12.42.2",
     "next": "16.2.10",
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "react-email": "^6.7.0",
     "resend": "^6.17.2"
   },
   "devDependencies": {

@@ -88,7 +88,6 @@ export function useSceneNavigation() {
       }
     }
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     function onKey(e: KeyboardEvent) {
       if (isModalOpen()) {
         return; // Disable scene navigation while modal is open

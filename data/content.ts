@@ -241,5 +241,5 @@ export const profile = {
   contact: "+92 3707843216",
   portfolio: "https://sulymanlive.netlify.app",
   availability: "Open to onsite/remote roles",
-  bio: "Full Stack Developer with 1 year of experience crafting modern web experiences. Passionate about clean architecture, intuitive user interfaces, and AI-assisted engineering, I build fast, scalable products that turn ambitious ideas into production-ready solutions.",
+  bio: "Full Stack Developer crafting modern web experiences. Passionate about clean architecture, intuitive user interfaces, and AI-assisted engineering, I build fast, scalable products that turn ambitious ideas into production-ready solutions.",
 };

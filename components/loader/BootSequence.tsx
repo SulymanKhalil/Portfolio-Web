@@ -84,7 +84,7 @@ export default function BootSequence({ onDone }: { onDone: () => void }) {
             </div>
 
             <div className="flex flex-col items-center gap-3 font-mono text-[11px] tracking-[0.3em] uppercase text-soft-gray">
-              <span className="text-frost/80">Entering Sulyman</span>
+              <span className="text-frost/80">Portfolio • Sulyman</span>
               <AnimatePresence mode="wait">
                 <motion.span
                   key={lineIndex}

@@ -4,7 +4,7 @@ import { Resend } from "resend";
 export const runtime = "nodejs";
 
 const TO_EMAIL = process.env.CONTACT_TO_EMAIL || "sulymankhalil.dev@gmail.com";
-const FROM_EMAIL = process.env.CONTACT_FROM_EMAIL || "Entering Sulyman <onboarding@resend.dev>";
+const FROM_EMAIL = process.env.CONTACT_FROM_EMAIL || "Portfolio Sulyman <onboarding@resend.dev>";
 
 interface ContactPayload {
   name: string;
@@ -58,7 +58,7 @@ export async function POST(req: NextRequest) {
 
   const html = `
     <div style="font-family: -apple-system, sans-serif; background:#05070C; color:#f3f6fb; padding:32px; border-radius:16px;">
-      <p style="color:#4de8d6; font-size:11px; letter-spacing:2px; text-transform:uppercase; margin:0 0 16px;">New transmission — Entering Sulyman</p>
+      <p style="color:#4de8d6; font-size:11px; letter-spacing:2px; text-transform:uppercase; margin:0 0 16px;">New transmission — Portfolio • Sulyman</p>
       <h2 style="margin:0 0 20px; font-size:20px;">${escapeHtml(subject)}</h2>
       <p style="margin:0 0 6px;"><strong>From:</strong> ${escapeHtml(name)} (${escapeHtml(email)})</p>
       <p style="margin:0 0 20px; white-space:pre-wrap; line-height:1.6;">${escapeHtml(message)}</p>

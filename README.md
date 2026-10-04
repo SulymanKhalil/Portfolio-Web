@@ -1,4 +1,4 @@
-# Entering Sulyman
+# Portfolio • Sulyman
 
 A scene-based, glassmorphic interactive portfolio. Not a scrolling page — six full-screen
 scenes (Home, About, Projects, Experience, Resume, Contact) navigated by wheel, touch,
