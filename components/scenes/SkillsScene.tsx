@@ -6,7 +6,7 @@ import GlassCard from "@/components/ui/GlassCard";
 const skillCategories = [
   {
     title: "Languages",
-    skills: ["JavaScript (ES6+)", "TypeScript"],
+    skills: ["JavaScript (ES6+)", "TypeScript", "Python"],
   },
   {
     title: "Frontend",
@@ -31,13 +31,15 @@ const skillCategories = [
     skills: ["WebRTC", "Ffmpeg"],
   },
   {
-    title: "AI Engineering",
+    title: "AI-Augmented Engineering",
     skills: [
-      "Claude",
-      "Cursor",
-      "Prompt Engineering",
-      "Context Engineering",
-      "Loop Engineering",
+      "Contextual Prompting",
+      "Role Prompting",
+      "Zero-Short Prompting",
+      "One-Shot / Few-Shot Prompting",
+      "Step-back Prompting",
+      "Prompt Debiasing",
+      "Prompt Ensembling",
     ],
   },
 ];
