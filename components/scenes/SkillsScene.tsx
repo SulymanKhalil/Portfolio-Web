@@ -35,11 +35,9 @@ const skillCategories = [
     skills: [
       "Contextual Prompting",
       "Role Prompting",
-      "Zero-Short Prompting",
       "One-Shot / Few-Shot Prompting",
       "Step-back Prompting",
       "Prompt Debiasing",
-      "Prompt Ensembling",
     ],
   },
 ];
